@@ -20,7 +20,7 @@ Make a copy of in_touch.conf.sample to in_touch.conf:
 cp in_touch.conf.sample in_touch.conf
 ```
 
-Customise the config file as appropriate
+Customise the config file as appropriate.
 
 Find the following file:
 
@@ -67,14 +67,14 @@ perl bin/fetch-facebook-messages.pl
 ## Built With
 
 * [Mojolicious](http://mojolicious.org/) - Next generation web framework for Perl
-* [Bootstrap Form Builder](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Bootstrap Form Builder](https://github.com/minikomi/Bootstrap-Form-Builder/) - Javascript Bootstrap form generator
 * [Google Cloud Python](https://googlecloudplatform.github.io/google-cloud-python/) - Python interface to Google Cloud APIs
 
 ## Authors
 
-* **Rob Hammond** - [PurpleBooth](https://github.com/PurpleBooth)
-* **Miguel Isidoro** - [PurpleBooth](https://github.com/PurpleBooth)
-* **Mark Geary** - [PurpleBooth](https://github.com/PurpleBooth)
+* **[Rob Hammond](https://github.com/robhammond)**
+* **[Miguel Isidoro](https://github.com/misidoro)**
+* **Mark Geary**
 
 ## License
 
