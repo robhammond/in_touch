@@ -1,0 +1,19 @@
+{
+	host => 'http://example.com', # no trailing slash
+	mongo_host => '127.0.0.1:27017',
+	mongo_db => 'in_touch',
+	facebook => {
+		token_ref => '', # Facebook Auth token with permissions to read_mail_inbox of page in question
+		page_name => '', # Facebook Page name
+		site_name => '', # Internal reference to site (ie domain name)
+	},
+	# delete below if 
+	google_nlp => {
+		creds => {
+			# absolute path to your JSON service key file downloaded from Google Cloud Console
+			# Set & uncomment unless you're confident both server & user/cron user have the relevant 
+			# env variable set
+			#app => '/home/user/key.json'
+		},
+	},
+}

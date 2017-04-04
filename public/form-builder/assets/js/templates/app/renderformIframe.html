@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="HandheldFriendly" content="true">
+    <title>form</title>
+  </head>
+  <body>
+    <form class="form-horizontal" <% if(multipart){ %>enctype="multipart/form-data"<% } %> action="http://localhost:3000/save" method="post">
+      <input type="hidden" name="medium" value="intouch_form">
+      <input type="hidden" name="site" value="internal">
+      <fieldset>
+        <%= text %>
+      </fieldset>
+      <button type="submit">Submit response</button>
+    </form>
+  </body>
+</html>

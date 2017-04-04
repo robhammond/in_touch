@@ -1,0 +1,44 @@
+% layout 'default';
+<h2>Submissions Dashboard</h2>
+%#== dumper $doc
+<table class="table table-condensed table-bordered table-striped table-hover">
+	<thead>
+		<tr>
+			<th>Date</th>
+			<th>Message</th>
+			<th>Medium</th>
+			<th>Sentiment</th>
+			<th>Tags</th>
+		</tr>
+	</thead>
+	<tbody>
+		% for my $d (@$doc) {
+		<tr>
+			<td><%= $d->{'datetime'} %></td>
+			<td><%= $d->{'msg'} %></td>
+			<td><%= $d->{'medium'} %></td>
+			<td><%= $d->{'sentiment'}->{'score'} %> / <%= $d->{'sentiment'}->{'magnitude'} %><br>
+			<span style="font-size:3.5em">
+			%# Flawed logic but you get the idea:
+			% if (($d->{'sentiment'}->{'score'} > 0.6) && ($d->{'sentiment'}->{'magnitude'} > 0.5)) {
+				😀
+			% } elsif (($d->{'sentiment'}->{'score'} > 0.2) && ($d->{'sentiment'}->{'magnitude'} > 0.5)) {
+				🙂
+			% } elsif (($d->{'sentiment'}->{'score'} >= 0) && ($d->{'sentiment'}->{'magnitude'} >= 0.1)) {
+				😐
+			% } elsif (($d->{'sentiment'}->{'score'} < 0) && ($d->{'sentiment'}->{'magnitude'} > 0.1)) {
+				😡
+			% } elsif (($d->{'sentiment'}->{'score'} < 0.5) && ($d->{'sentiment'}->{'magnitude'} > 2)) {
+				😡
+			% }
+			</span>
+			</td>
+			<td>
+				% for (my $i=0;$i<4;$i++) {
+					<span class="label label-default"><%= $d->{'entities'}->[$i] %></span>
+				% }
+			</td>
+		</tr>
+		% }
+	</tbody>
+</table>

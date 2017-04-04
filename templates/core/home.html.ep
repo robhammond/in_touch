@@ -1,0 +1,7 @@
+% layout 'default';
+<h1>In Touch</h1>
+<p>A tool to help journalists gather, filter, and respond to feedback from users; story ideas, pictures, videos and more.</p>
+<ul>
+	<li><a href="/dashboard">Dashboard</a></li>
+	<li><a href="/create">New Form</a></li>
+</ul>
