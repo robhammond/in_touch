@@ -1,5 +1,5 @@
 # In Touch
-Concept of a CRM for journalists
+Reader Relationship Management for journalists
 
 ## Getting started
 
